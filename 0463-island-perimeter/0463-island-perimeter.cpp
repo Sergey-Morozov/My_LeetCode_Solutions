@@ -12,15 +12,14 @@ public:
         for (int i = 0; i < row; i++)
             for (int j = 0; j < col; j++) {
                 if (grid[i][j]) {
-                    res += 4;
-                    if (i > 0 && grid[i - 1][j])
-                        res--;
-                    if (i < row - 1 && grid[i + 1][j])
-                        res--;
-                    if (j > 0 && grid[i][j - 1])
-                        res--;
-                    if (j < col - 1 && grid[i][j + 1])
-                        res--;
+                    if (i == 0 || !grid[i - 1][j])
+                        res++;
+                    if (i == row - 1 || !grid[i + 1][j])
+                        res++;
+                    if (j == 0 || !grid[i][j - 1])
+                        res++;
+                    if (j == col - 1 || !grid[i][j + 1])
+                        res++;
                 }
             }
         return res;
