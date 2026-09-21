@@ -1,3 +1,8 @@
+// Author: Sergey Morozov
+// https://leetcode.com/u/Sergey-Morozov/
+// https://github.com/Sergey-Morozov
+// https://www.linkedin.com/in/sergey-morozov-6ba2705/
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
