@@ -10,9 +10,12 @@ public:
         const int n = friends.size();
         int p1 = 0, p2 = 1, p3 = 1;
         oldFriends[0] = id;
-        memset(seenFriends, 0, n);
+        for (int i = 0; i < n; i++)
+            seenFriends[i] = 0;
         seenFriends[id] = 1;
-        memset(videos, 0, n * 9);
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < 9; j++)
+                videos[i][j] = 0;
 
         for (int i = 0; i < level; i++) {
             for (int j = p1; j < p2; j++) {
